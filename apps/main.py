@@ -13,6 +13,11 @@ from sklearn.metrics import (confusion_matrix, accuracy_score, precision_score, 
                              precision_recall_curve, roc_curve)
 
 
+class HistoryWrapper:
+    def __init__(self, history_dict):
+        self.history = history_dict
+
+
 def load_image(file_name: str) -> np.ndarray:
     """
     Load image by file path
